@@ -1,0 +1,171 @@
+/* Fuentes personalizadas */
+@font-face {
+  font-family: "Raleway";
+  src: url("Raleway-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "Italic_Raleway";
+  src: url("Raleway-Italic-VariableFont_wght.ttf");
+}
+
+/* Configuración del body para la imagen de fondo */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+  background-image: url(images/below.jpg); /* Aquí debes colocar la ruta de la imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Esto hace que el fondo se mantenga fijo al hacer scroll */
+}
+
+/* Header */
+header {
+  background-color: white;
+  padding: 0.15rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0 0.125rem;
+  position: relative;
+  animation: changeColor 5s infinite; /* Aplica la animación */
+}
+
+@keyframes changeColor {
+  0% {
+    background-color: white; /* Color inicial */
+  }
+  25% {
+    background-color: #ffcc00; /* Color 1 */
+  }
+  50% {
+    background-color: #66ccff; /* Color 2 */
+  }
+  75% {
+    background-color: #ff6699; /* Color 3 */
+  }
+  100% {
+    background-color: white; /* Regresa al color inicial */
+  }
+}
+
+.logo-container {
+  flex: 1;
+}
+
+.logo {
+  width: auto;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  top: 35%;
+  right: 1%;
+}
+
+.header-container button {
+  border: none;
+  background-color: transparent;
+  height: 1.25rem;
+}
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0 1.5rem;
+}
+
+.main-nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 400;
+}
+
+main {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.85
+  ); /* Fondo blanco semi-transparente */
+}
+
+#cart_summary,
+#payment_section {
+  width: 100%;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+#payment_form input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+#payment_form button {
+  padding: 0.9rem 1.8rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  background-color: #3498db;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#payment_form button:hover {
+  background-color: #2980b9;
+}
+
+/* Botón de regreso al menú */
+#return_menu_section {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+#menu_button {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #27ae60;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#menu_button:hover {
+  background-color: #2ecc71;
+}
+
+/* Footer */
+footer {
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+  padding: 1rem;
+  text-align: center;
+  color: #333;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Contact Page</title>
+    <link rel="stylesheet" href="css/contact_page_stylesheet.css">
+    <script src="javascript/landing_page_script.js" defer></script>
+</head>
+<header>
+    <div class="overlay"></div>
+    <div class="hamburger" id="hamburger">
+        <svg width="40" height="40" viewBox="0 0 100 100">
+            <path class="line line1" d="M 30,35 H 70 C 80,35 80,40 70,40 H 30 C 20,40 20,35 30,35 Z" />
+            <path class="line line2" d="M 30,50 H 70 C 80,50 80,55 70,55 H 30 C 20,55 20,50 30,50 Z" />
+            <path class="line line3" d="M 30,65 H 70 C 80,65 80,70 70,70 H 30 C 20,70 20,65 30,65 Z" />
+        </svg>
+    </div>
+    <nav class="side-menu" id="sideMenu">
+        <ul>
+            <li><a href=LandingPage_POKE.html>Inicio</a></li>
+            <li><a href=InfoPage.html>Nosotros</a></li>
+            <li><a href=ContactPage.html>Contacto</a></li>
+            <li><a href="#">Ubicaciones</a></li>
+        </ul>
+    </nav>
+    </div>
+</header>
+<body>
+    <div id="cop_background">
+
+        <form action="LandingPage_POKE.html" class="Contact-form-container">
+            <h2>Contact Us</h2>
+        
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="subject">Subject:</label>
+            <select id="subject" name="subject" required>
+                <option value="complaint">Complaint</option>
+                <option value="suggestion">Suggestion</option>
+                <option value="inquiry">Inquiry</option>
+            </select>
+    
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" cols="50" required></textarea>
+    
+            <button type="submit" class="Submit-Button">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

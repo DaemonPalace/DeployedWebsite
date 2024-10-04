@@ -1,0 +1,147 @@
+@font-face {
+    font-family: Raleway;
+    src: url(Raleway/Raleway-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Italic_Raleway;
+    src: url(Raleway-Italic-VariableFont_wght.ttf);
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: 16px;
+    overflow-x: hidden;
+    font-family: Raleway, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: white;
+    color: white;
+    position: relative;
+    z-index: 10;
+}
+
+/* Overlay Styles */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    z-index: 4; /* Should be below the menu but above other content */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* Prevent clicks on the overlay */
+}
+
+/* Overlay Show Class */
+.overlay.show {
+    opacity: 1; /* Show the overlay when the menu is open */
+    pointer-events: auto; /* Allow interaction with the overlay */
+}
+
+/* Hamburger Styles */
+.hamburger {
+    cursor: pointer;
+    z-index: 15;
+    position: fixed; /* Keep the hamburger in view while scrolling */
+    top: 10px; /* Adjust position */
+    right: 10px; /* Move hamburger to the right */
+}
+
+/* Hamburger SVG Transition */
+.hamburger svg {
+    transition: transform 0.3s ease;
+}
+
+/* Side Menu Styles */
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Hide the menu by default, move it to the right */
+    width: 250px;
+    height: 100%;
+    background-color: rgba(237, 234, 234, 0.8); /* Gray with 80% opacity */
+    padding-top: 60px;
+    transition: right 0.3s ease;
+    z-index: 5;
+}
+
+/* Side Menu Items */
+.side-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.side-menu ul li {
+    padding: 15px 25px;
+}
+
+.side-menu ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    display: block;
+}
+
+/* Side Menu Open Class */
+.side-menu.open {
+    right: 0; /* Show the menu when open */
+}
+
+/* Hamburger Open Animation */
+.hamburger.open svg {
+    transform: rotate(-90deg); /* Rotate the hamburger icon */
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 40px;
+    justify-content: space-around;
+}
+
+.team-member {
+    background-color: lightgrey;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow more subtle */
+    padding: 20px;
+    text-align: center;
+    width: 50vh; /* Slightly smaller width */
+    font-family: Raleway, sans-serif;
+    transition: transform 0.3s ease; /* Smooth scaling on hover */
+}
+
+.team-member:hover {
+    transform: scale(1.15); /* Slight zoom effect on hover */
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 30vh; /* Slightly smaller image */
+    height: 30vh;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.team-member h3 {
+    margin: 0 0 10px;
+    font-size: 1.4em; /* Slightly smaller font size */
+    color: #333;
+}
+
+.team-member p {
+    font-size: 0.9em; /* Slightly smaller font size */
+    color: #666; /* Softer gray color */
+    margin: 0 0 15px;
+}
+
+

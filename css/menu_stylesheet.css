@@ -1,0 +1,272 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  background-color: beige;
+}
+
+header {
+  background-color: white;
+  padding: 0.15rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0 0.125rem;
+  position: relative;
+  animation: changeColor 5s infinite; /* Aplica la animación */
+}
+
+@keyframes changeColor {
+  0% {
+    background-color: white; /* Color inicial */
+  }
+  25% {
+    background-color: #ffcc00; /* Color 1 */
+  }
+  50% {
+    background-color: #66ccff; /* Color 2 */
+  }
+  75% {
+    background-color: #ff6699; /* Color 3 */
+  }
+  100% {
+    background-color: white; /* Regresa al color inicial */
+  }
+}
+
+.logo-container {
+  flex: 1;
+}
+
+.logo {
+  width: auto;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  top: 35%;
+  right: 1%;
+}
+
+.header-container button {
+  border: none;
+  background-color: transparent;
+  height: 1.25rem;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0 1.5rem;
+}
+
+.main-nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 400;
+}
+
+@keyframes showShoppingCart {
+  0% {
+    left: -23%;
+  }
+  100% {
+    left: 2%;
+  }
+}
+
+@keyframes hideShoppingCart {
+  0% {
+    left: -2%;
+  }
+  100% {
+    left: -23%;
+  }
+}
+
+#shopping_cart_container {
+  height: 30vh;
+  width: 50vw;
+  position: fixed;
+  left: -45%;
+  top: 37.5%;
+  z-index: 1000;
+}
+
+#shopping_cart_container img {
+  height: 20px;
+  position: fixed;
+  left: 2%;
+  z-index: 1;
+}
+
+#shopping_cart_container:hover #shopping_cart {
+  animation: showShoppingCart 0.6s forwards;
+}
+
+#shopping_cart_container:not(:hover) #shopping_cart {
+  animation: hideShoppingCart 0.6s forwards;
+}
+
+#shopping_cart {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  height: fit-content;
+  width: 15rem;
+  position: fixed;
+  left: -23%;
+  top: 25%;
+  box-shadow: 0 2px 0px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.menu-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.text-heading {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+.text-heading h1 {
+  background-image: url(/images/text2.jpg);
+  color: transparent;
+  background-clip: text;
+  background-size: cover;
+  background-position: center;
+  font-size: 2rem;
+}
+
+.grid-menu {
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: visible;
+  scroll-snap-type: x mandatory;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 25.5rem;
+  gap: 2rem;
+}
+
+.menu-item-container {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column; /* Cambiado a columna para apilar elementos */
+  align-items: center; /* Centrar los elementos */
+  position: relative;
+  height: auto; /* Ajustar altura automáticamente */
+  width: 12rem;
+  scroll-snap-align: center;
+  border-radius: 0.75rem;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center; /* Centrar el texto */
+  margin-bottom: 1rem; /* Espacio entre los items */
+}
+
+.menu-item-container h2 {
+  font-size: 1.2rem; /* Tamaño del título */
+  margin: 0.5rem 0; /* Espacio alrededor del título */
+}
+
+.menu-price {
+  font-size: 2rem; /* Tamaño de fuente para el precio */
+  color: #09e787; /* Color del texto del precio */
+  margin: 0.25rem 0; /* Espacio alrededor del precio */
+}
+
+.menu-description {
+  font-size: 0.9rem; /* Tamaño de fuente para la descripción */
+  color: #666; /* Color más claro para la descripción */
+  margin: 0.35rem 0; /* Espacio alrededor de la descripción */
+}
+
+.grid-menu img {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.7rem;
+}
+
+.glassmorph-overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 0.75rem;
+  position: absolute;
+  height: 40%;
+  width: 100%;
+  bottom: -40%;
+  backdrop-filter: blur(15px);
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centrar el texto dentro del overlay */
+}
+
+.glassmorph-overlay p {
+  color: beige;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+@keyframes showGlassmorphOverlay {
+  from {
+    bottom: -40%;
+  }
+  to {
+    bottom: 0%;
+  }
+}
+
+@keyframes hideGlassmorphOverlay {
+  from {
+    bottom: 0%;
+  }
+  to {
+    bottom: -40%;
+  }
+}
+
+.grid-menu .menu-item-container:hover {
+  transform: translateY(10px) scale(1.1);
+  box-shadow: 2px 2px 8px 0px #555555;
+}
+
+.grid-menu .menu-item-container:hover .glassmorph-overlay {
+  animation: showGlassmorphOverlay 0.3s forwards;
+}
+
+.grid-menu .menu-item-container:not(:hover) .glassmorph-overlay {
+  animation: hideGlassmorphOverlay 0.2s forwards;
+}
+
+.grid-menu::-webkit-scrollbar {
+  height: 0.8rem;
+}
+
+.grid-menu::-webkit-scrollbar-track {
+  background: beige;
+  border-radius: 10px;
+}
+
+.grid-menu::-webkit-scrollbar-thumb {
+  background-color: #f2f5a9;
+  border-radius: 10px;
+  border: 0.125rem solid #ccc;
+}
+
+.grid-menu::-webkit-scrollbar-thumb:hover {
+  background-color: #f2f5a9;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>POKE - Landing Page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/landing_page_stylesheet.css" />
+    <script src="javascript/landing_page_script.js" defer></script>
+  </head>
+  <header>
+    <div class="overlay"></div>
+    <div class="hamburger" id="hamburger">
+      <svg width="40" height="40" viewBox="0 0 100 100">
+        <path
+          class="line line1"
+          d="M 30,35 H 70 C 80,35 80,40 70,40 H 30 C 20,40 20,35 30,35 Z"
+        />
+        <path
+          class="line line2"
+          d="M 30,50 H 70 C 80,50 80,55 70,55 H 30 C 20,55 20,50 30,50 Z"
+        />
+        <path
+          class="line line3"
+          d="M 30,65 H 70 C 80,65 80,70 70,70 H 30 C 20,70 20,65 30,65 Z"
+        />
+      </svg>
+      <nav class="side-menu" id="sideMenu">
+        <ul>
+          <li><a href="LandingPage_POKE.html">Inicio</a></li>
+          <li><a href="InfoPage.html">Nosotros</a></li>
+          <li><a href="ContactPage.html">Contacto</a></li>
+          <li><a href="#">Ubicaciones</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div id="lp_background">
+      <h1>POKE</h1>
+    </div>
+    <div class="container">
+      <h2>MENU</h2>
+      <div id="menu_picker">
+        <div1 class="menu_button_background" id="entree_menu">
+          <div class="interactable"  onclick="redirectTo('Menu_POKE.html')">
+            <button1 class="menu_button" id="entree_menu_button">Entradas</button1
+            >
+          </div>
+        </div1>
+        <div2 class="menu_button_background" id="poke_menu">
+          <div class="interactable"  onclick="redirectTo('Menu_POKE.html')">
+            <button2 class="menu_button" id="poke_menu_button">Bowls</button2>
+          </div>
+        </div2>
+        <div3 class="menu_button_background" id="drinks_menu">
+          <div class="interactable"  onclick="redirectTo('Menu_POKE.html')">
+            <button3 class="menu_button" id="drinks_menu_button" >Bebidas</button3
+            >
+          </div>
+        </div3>
+      </div>
+    </div>
+    <main>
+    <footer>
+      <div class="column">
+        <img id="logo" src="/images/logo.webp" height="80px" />
+        <div class="row">
+          <img
+            height="30px"
+            decoding="async"
+            src="https://www.pokecolombia.co/wp-content/themes/theme/assets/img/Home/Endeavor.svg"
+            alt="logo endeavor"
+            class="lazyloaded"
+            data-ll-status="loaded"
+          />
+          <div class="column" id="text-column">
+            <p>Foodie S.A.S</p>
+            <p>Endeavor Company</p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <ul>
+          <li><a id="eventos">EVENTOS</a></li>
+          <li><a id="escribenos">ESCRIBENOS</a></li>
+          <li><a id="cuentanos_tu_experiencia">CUENTANOS TU EXPERIENCIA</a></li>
+          <li><a id="trabaja_con_nosotros">TRABAJA CON NOSOTROS</a></li>
+          <li><a id="politica_de_privacidad">POLITICA DE PRIVACIDAD</a></li>
+        </ul>
+      </div>
+    </footer>
+</html>
